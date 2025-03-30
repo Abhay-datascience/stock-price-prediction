@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction Result</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .stock-chart {
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+        }
+        .btn-back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container d-flex justify-content-center">
+    <div class="card p-4 text-center" style="max-width: 500px;">
+        <h2 class="mb-3">📈 Stock Prediction</h2>
+
+        <h4 class="text-primary">Stock: <b>{{ ticker }}</b></h4>
+        <h3 class="text-success">Predicted Close Price: ₹{{ predicted_price }}</h3>
+
+        <div class="mt-4">
+            <h5>Stock Price Chart (Last 60 Days)</h5>
+            <img src="{{ chart_path }}" alt="Stock Chart" class="stock-chart">
+        </div>
+
+        <a href="/" class="btn btn-primary btn-back">🔙 Go Back</a>
+    </div>
+</div>
+
+</body>
+</html>
